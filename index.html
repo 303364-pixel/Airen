@@ -45,17 +45,10 @@ footer{background:var(--deep);color:#e3eee6;padding:28px;text-align:center;font-
 <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true"><div class="modal" id="modalInner"></div></div>
 <script>
 const CATS=[['news','News'],['opinion','Opinion'],['cartoon','Editorial Cartooning'],['feature','Feature'],['science','Science and Technology'],['sports','Sports News']];
-const KEY='trailblazer-posts-v1',PIN='1119';
-const DEMO=[
-{id:'d1',type:'news',title:'NGNHS Strengthens Programs for a Safer and Brighter Learning Environment',summary:'A sample campus news headline to demonstrate the publication layout.',body:'This is sample content for website design purposes only. Replace it with a verified school news article before publishing.',image:'hero.jpg',date:'',demo:true},
-{id:'d2',type:'opinion',title:'The Power of a Kind Classroom',summary:'A sample opinion column title.',body:'This is a sample opinion article. Replace it with original student writing.',image:'opinion.jpg',date:'',demo:true},
-{id:'d3',type:'cartoon',title:'A Heavier Tomorrow?',summary:'A sample editorial cartoon entry.',body:'This is a sample editorial cartoon entry. Replace it with an original illustration and caption.',image:'cartoon.jpg',date:'',demo:true},
-{id:'d4',type:'feature',title:'Growing Leaders, Greener Communities',summary:'A sample feature story about student participation.',body:'This is sample feature content, not a report of a verified school event.',image:'feature.jpg',date:'',demo:true},
-{id:'d5',type:'science',title:'Innovation Starts in the Classroom',summary:'A sample science and technology feature.',body:'This is sample science and technology content.',image:'science.jpg',date:'',demo:true},
-{id:'d6',type:'sports',title:'NGNHS Athletes Show Grit in District Meet',summary:'A sample sports news story for layout demonstration.',body:'This is sample sports news content, not a verified competition result.',image:'sports.jpg',date:'',demo:true}
-];
+const KEY='trailblazer-posts-v2',PIN='3333';
+const DEMO=[];
 let posts=read(),page='home',unlocked=false,editing=null,query='';
-function read(){try{let p=JSON.parse(localStorage.getItem(KEY));return Array.isArray(p)?p:DEMO}catch{return DEMO}}
+function read(){try{let p=JSON.parse(localStorage.getItem(KEY));return Array.isArray(p)?p:[]}catch{return []}}
 function save(){localStorage.setItem(KEY,JSON.stringify(posts))}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function cat(t){return CATS.find(x=>x[0]===t)?.[1]||'News'}
