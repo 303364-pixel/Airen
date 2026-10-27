@@ -1,14 +1,24 @@
 THE TRAILBLAZER — New Guinsaugon National High School
 
-Open index.html in a browser. The website is responsive and includes six publication sections, search, article reading, and a local demonstration CMS.
+Live site: https://airen-gilt.vercel.app/
+GitHub: https://github.com/303364-pixel/Airen
 
-CMS: click CMS in navigation. Prototype PIN: 1119. Add/edit/delete articles, export/import JSON.
+The website includes a built-in Content Management System (CMS) accessible through the CMS navigation button. The CMS is integrated into index.html; no separate CMS file is required.
 
-IMPORTANT:
-- All displayed articles are EXAMPLES, not verified news reports.
-- Bundled article photographs are crops from the supplied AI-generated design mockup and are illustrative, not documentary evidence.
-- The CMS uses browser localStorage and a visible client-side PIN. This is NOT secure authentication and does NOT publish articles across devices.
-- For a public school publication, connect a database and proper server-side authentication before accepting real editor submissions.
-- Fonts load from Google Fonts when online; fallback font works offline.
+Administrator prototype PIN: 3333
 
-Deploy: upload the entire folder to a static hosting service or commit its files to a GitHub repository connected to Vercel. index.html is the entry point.
+CMS features:
+- Add, edit, and delete articles
+- Sections: News, Opinion, Editorial Cartooning, Feature, Science and Technology, Sports News
+- Search and article reading
+- Import and export article JSON
+- No preloaded sample articles
+
+IMPORTANT LIMITATIONS:
+- This is a browser-local prototype. Articles are saved in localStorage on the device/browser used to edit them.
+- Articles do not automatically synchronize to other visitors or devices.
+- The PIN is visible in the front-end source and is not secure authentication.
+- Use a database and server-side authentication for real public publishing.
+- Existing illustrative images are not documentary photos of verified school events.
+
+The site deploys from the main branch of this repository through Vercel. index.html is the entry point.
